@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  frontend:
+    image: docked-cra_frontend:latest
+    build: ./
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 3000:3000
